@@ -1,0 +1,68 @@
+View the content of a file and display line numbers.
+cat -n shanu.txt # n view the text of file with number for all line ,-b: This adds line numbers to non-blank lines
+
+Change the access permissions of files to make them readable, writable, and executable by the owner only.
+chmod 070 shanu.txt
+
+Check the last 10 commands you have run.
+history 10
+
+Remove a directory and all its contents.
+rm -r shanu_devops
+
+Create a fruits.txt file, add content (one fruit per line), and display the content.
+vim fruits.txt
+I
+apple
+orange
+kiwi
+graps
+esc :wq
+
+Add content in devops.txt (one in each line) - Apple, Mango, Banana, Cherry, Kiwi, Orange, Guava. Then, append "Pineapple" to the end of the file.
+cp fruits.txt devops.txt
+echo "pinapple" >> devops.txt
+
+Show the first three fruits from the file in reverse order.
+head -3 | tac  #tac is reverse of cat which view th file in normal order, | = pipe join the two commands, head show line from top , -3 3 is the number of lines
+
+Show the bottom three fruits from the file, and then sort them alphabetically.
+tail -3 | sort # tail is used to print from last line , sort will sort the line by default it will sort alphabeticaly from A-Z , sort -n use to sort in numerical order , sort -r if we add r at the end it will reverse the sort
+
+Create another file Colors.txt, add content (one color per line), and display the content.
+touch colors.txt 
+echo "red/nblue/ngreen/pink" >> colors.txt
+
+Add content in Colors.txt (one in each line) - Red, Pink, White, Black, Blue, Orange, Purple, Grey. Then, prepend "Yellow" to the beginning of the file.
+echo -e "Yellow/n$(cat colors.txt)" > color.txt  # > clear all the data and then ad the echo command , >> append data in txt file
+
+Find and display the lines that are common between fruits.txt and Colors.txt.
+comm -12 fruit.txt colors.txt # comm - print 3 coloumn 1. unmatch part of file1.txt 2. unmatch part of file2.txt 3. comman part of both file (adding -1 or -2 or -3 will not print the mention line number)
+
+Count the number of lines, words, and characters in both fruits.txt and Colors.txt.
+wc fruit.txt color.txt # wc print 3 coloumn 1. no. of line 2. no. of word 3. no. character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
